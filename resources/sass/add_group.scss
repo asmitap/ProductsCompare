@@ -1,0 +1,33 @@
+.add_group{
+    height:300px;
+    background-color: #ded9d9;
+    padding:15px;
+    border-radius:5px;
+    
+    h2{
+        color:black;
+    }
+    button{
+        border-radius:2px;
+    }
+    button:hover{
+        background-color:white;
+        color:darkcyan;
+    }
+}
+
+.edit_feature{
+    margin-top : 10px;
+}
+
+.product{
+    .card{
+        .card-header{
+            font-size : 20px;
+        }
+        .btn-danger{
+            margin-bottom : 15px;
+            border-radius : 5px;
+        }
+    }
+}

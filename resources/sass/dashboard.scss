@@ -1,0 +1,36 @@
+.dashboard{
+    .title{
+        padding:10px;
+        h2{
+            a{
+                color : white;
+                text-decoration: none;
+            }
+        } 
+    }
+    .dropdown-menu.show {
+        position: relative !important;
+        transform: none !important;
+    }
+    .sidebar {
+        height : 580px;
+        border-radius : 3px;
+        background-color : #135394;
+        padding-top : 25px;
+        text-align : center;
+    }
+    .nav-link{
+        color:white;
+        font-size:20px;
+    }
+    .nav-link:hover{
+        color:darkcyan;
+    }
+    .dropdown-menu{
+        background-color: white;
+        font-size: 15px;
+        margin-left:100px;
+        color:blue;
+    }
+}
+

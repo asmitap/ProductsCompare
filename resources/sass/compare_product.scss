@@ -1,0 +1,48 @@
+.compare_product{
+    margin-top:30px;
+    .top_content{
+        background-color:#fbf9f9;
+        .selected{
+            border:1px solid #f5f2f2;
+            padding:30px;
+            text-align:center;
+            font-size:15px;
+            font-weight: 400;
+
+            p{
+                margin:10px;
+                font-weight: 400;
+            }
+            img{
+                height:90px;
+                width:70px;
+            }
+        }
+    }
+    .btn-link{
+        color: #135394;
+        font-weight:500;
+        text-decoration:none;
+    }
+    .featurea{
+        border:1px solid #e8e5e5;
+        padding:10px;
+        text-align:center;
+        font-weight:800;
+        color:#444;
+    }
+    .featurea:first-child {
+        font: bold 16px/18px proxima-semibold,arial,sans-serif;
+        color: #444;
+        text-transform: capitalize;
+    }
+    .feature{
+        border:1px solid #e8e5e5;
+        padding:10px;
+        text-align:center;
+        font-weight:800;
+        color:#6d6d6d;
+    }
+
+    
+}
