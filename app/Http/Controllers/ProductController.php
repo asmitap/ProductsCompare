@@ -74,4 +74,36 @@ class ProductController extends Controller
         $products = Product::all();
         return view('admin.view_product')->with('products', $products);
     }
+
+    public function editProduct($id)
+    {
+        $data = Product::find($id);
+        return view('admin.edit_product', compact('data'));
+    }
+
+    public function updateProduct(Request $request, $id)
+    {
+        $this->validate($request, [
+            'product_name' => 'required|min:4|unique:products',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'description' => 'required',
+        ]);
+        $data = Product::find($id);
+        $data->product_name = $request['product_name'];
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $filename = $image->getClientOriginalName();
+            $image->move(public_path('upload'), $filename);
+            $data->image = $request->file('image')->getClientOriginalName();
+        }
+        $data->description = $request['description'];
+        $data->save();
+        return back();
+    }
+    public function destroyProduct($id)
+    {
+        $data = Product::find($id);
+        $data->delete();
+        return back();
+    }
 }

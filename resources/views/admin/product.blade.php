@@ -63,6 +63,8 @@
 
 
                             <button type="submit" name="submit" class="btn btn-primary upload-image"> Submit </button>
+                            <a href="{{route('viewproduct')}}" class="btn btn-primary upload-image"> View Product </a>
+
                         </form>
                     </div>
                 </div>

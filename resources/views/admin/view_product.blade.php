@@ -15,8 +15,8 @@
                 <td><img src="{{ asset( 'storage/'.$datas->image )}}" height="100px" width="100px"></td>
                 <td>{{$datas->description}}</td>
                 <td>
-                    <a href="" class="btn btn-primary">Edit</a>
-                    <a href="" class="btn btn-danger">Delete</a>
+                    <a href="{{route('editProduct',['id' => $datas->id])}}" class="btn btn-primary">Edit</a>
+                    <a  href="{{route('destroyProduct',['id' => $datas->id])}}" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
             @endforeach

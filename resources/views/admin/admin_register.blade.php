@@ -63,7 +63,7 @@
 
                         
                         <div class="form-group row">
-                            <input type="hidden" name="is_admin" value="0">
+                            <input type="hidden" name="is_admin" value="1">
                         </div>
 
                         <div class="form-group row mb-0">
