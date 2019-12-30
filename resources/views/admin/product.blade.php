@@ -1,6 +1,8 @@
 @extends('admin.dashboard')
 @section('admin')
 <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+<link href=”http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.css” rel=”stylesheet”>
+
 
 <div class="product">
     <div class="container">
@@ -25,7 +27,7 @@
                             <input type="file" name="image" id="image" class="form-control" placeholder="Upload Image"><br>
                             <div class="error image btn-danger"> </div>
 
-                            <textarea class="form-control description" name="description"></textarea>
+                            <textarea class="form-control description" name="description" id="description"></textarea>
 
                             <div class="form-group" style="margin-top:30px;">
                                 <h2> Select Variants </h2>
@@ -77,9 +79,13 @@
 </div>
 <script>
     $(document).ready(function($) {
-        $(document).ready(function() {
-            $('.multiple_select').select2();
+        
+        $('.multiple_select').select2();
+
+        $('#description').summernote({
+            height: 300,
         });
+
         $('.productform').submit(function(e) {
             var fd = new FormData(this);
 
@@ -118,11 +124,9 @@
         });
     });
 
-    $(document).ready(function() {
-        $('.description').summernote({
-            height: 300,
-        });
-    });
 </script>
+
+<script src=”http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.js”></script>
+
 <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
 @endsection

@@ -40,8 +40,6 @@ Route::get('/editProduct/{id}', 'ProductController@editProduct')->name('editProd
 Route::post('/updateProduct/{id}','ProductController@updateProduct')->name('updateProduct')->middleware('admin');
 Route::get('/deleteProduct/{id}', 'ProductController@destroyProduct')->name('destroyProduct')->middleware('admin');
 
-
-
 Route::get('/fetchfeature/{id}', 'ProductGroupController@fetchfeature')->name('fetchfeature');
 Route::post('/compare', 'ProductGroupController@compareproduct')->name('compare');
 Route::get('/compareproduct', 'ProductGroupController@compareproduct')->name('compare_product');

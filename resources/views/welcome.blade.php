@@ -111,25 +111,6 @@
         }
     });
 
-
-    $(function () {
-        $('#select').on('change', function () {     
-            var SelectList = $('#select');
-            //Here i'll find how many dropdown are present
-            for (var i = 0; i < SelectList.length ; i++) {
-                //Here i need to check each dropdown value whether it selected or not
-                if (SelectList[i].value != "") {
-                    //If all dropdown is selected then Enable button
-                    $("#compare").attr("disabled", true);
-                }
-                else {
-                    //Disable button if any dropdown is not selected
-                    $("#compare").attr("disabled", false);
-                }
-            }
-        }); 
-    });
-    
 </script>
 <script type="text/javascript" src="{{ asset('js/standalone/selectize.js') }}"></script>
 @endsection
